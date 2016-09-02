@@ -1,0 +1,36 @@
+PODS:
+  - EZLoadingActivity (0.8)
+  - GCDKit (1.2.6)
+  - JGProgressHUD (1.4)
+  - MBProgressHUD (1.0.0)
+  - NVActivityIndicatorView (2.10)
+  - PKHUD (3.2.1)
+  - ProgressHUD (2.3)
+  - SideMenuController (0.1.5)
+  - SVProgressHUD (2.0.3)
+
+DEPENDENCIES:
+  - EZLoadingActivity
+  - GCDKit
+  - JGProgressHUD
+  - MBProgressHUD
+  - NVActivityIndicatorView
+  - PKHUD
+  - ProgressHUD
+  - SideMenuController
+  - SVProgressHUD
+
+SPEC CHECKSUMS:
+  EZLoadingActivity: 6fd75a05765a4085f4b6fef6f62edf9f144b3139
+  GCDKit: 739f0feaf0dd4bb59da88667b077198d809e3dfd
+  JGProgressHUD: 1617b0940cf80bb53e8f7d6f0fd69252ea45d6d4
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  NVActivityIndicatorView: 5568608c3511690a42c4dd02f7a1de4361d670ae
+  PKHUD: 001c11518f125a273ddf026bcc64918423744ea2
+  ProgressHUD: 0d2afb77bc41997dfff1aafb8617317d858834a9
+  SideMenuController: cc5cc54e839d98c4fbb8e63feeff21829ea149e3
+  SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
+
+PODFILE CHECKSUM: 50d6230ca3c91c81a0c27f086869254db4ff89b6
+
+COCOAPODS: 1.0.1

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="NQB-FR-jgG">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Caching Side Menu Controller-->
+        <scene sceneID="6Vn-hj-STo">
+            <objects>
+                <viewController id="NQB-FR-jgG" customClass="CachingSideMenuController" customModule="HUDSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hdp-4B-CUS"/>
+                        <viewControllerLayoutGuide type="bottom" id="8no-yM-eP3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="n3h-Jr-tqz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <segue destination="j74-WX-LhP" kind="custom" identifier="cachingEmbedSide" customClass="SideContainmentSegue" customModule="SideMenuController" id="YDq-Le-HC5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2mT-pu-9gW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="353" y="367"/>
+        </scene>
+        <!--Caching Side View Controller-->
+        <scene sceneID="2vJ-7F-4vH">
+            <objects>
+                <viewController id="j74-WX-LhP" customClass="CachingSideViewController" customModule="HUDSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iYn-fB-3aq"/>
+                        <viewControllerLayoutGuide type="bottom" id="YBh-Zo-Id7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7Z9-pr-9hG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Pad-Ai-AfV">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="Fk2-8K-HIS">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Fk2-8K-HIS" id="xU3-Ig-Q4F">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="j74-WX-LhP" id="9jL-N3-pJr"/>
+                                    <outlet property="delegate" destination="j74-WX-LhP" id="X4u-5X-jCL"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Pad-Ai-AfV" secondAttribute="trailing" id="1Pp-Id-dWx"/>
+                            <constraint firstItem="Pad-Ai-AfV" firstAttribute="top" secondItem="iYn-fB-3aq" secondAttribute="bottom" id="9br-fk-5qE"/>
+                            <constraint firstItem="YBh-Zo-Id7" firstAttribute="top" secondItem="Pad-Ai-AfV" secondAttribute="bottom" id="lZV-KI-WP1"/>
+                            <constraint firstItem="Pad-Ai-AfV" firstAttribute="leading" secondItem="7Z9-pr-9hG" secondAttribute="leading" id="ybT-36-v6b"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="tableView" destination="Pad-Ai-AfV" id="DIX-fK-Cml"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WyC-Ss-cFh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="809" y="367"/>
+        </scene>
+    </scenes>
+</document>

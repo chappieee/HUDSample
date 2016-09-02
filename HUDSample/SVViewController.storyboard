@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Qr1-hg-bfa">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="uNO-Vv-VPj">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Qr1-hg-bfa" customClass="SVViewController" customModule="HUDSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dyF-oq-vgc"/>
+                        <viewControllerLayoutGuide type="bottom" id="Haw-iu-Ptw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2wK-AH-O3f">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="pDB-hN-iyk">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="EIg-cV-EVJ">
+                                        <rect key="frame" x="0.0" y="50" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EIg-cV-EVJ" id="cbd-Rb-6Yl">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Qr1-hg-bfa" id="4CM-wK-PbO"/>
+                                    <outlet property="delegate" destination="Qr1-hg-bfa" id="Aml-qf-YBF"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pDB-hN-iyk" firstAttribute="top" secondItem="dyF-oq-vgc" secondAttribute="bottom" id="Gcn-8i-5mI"/>
+                            <constraint firstItem="Haw-iu-Ptw" firstAttribute="top" secondItem="pDB-hN-iyk" secondAttribute="bottom" id="VyG-o0-LHI"/>
+                            <constraint firstItem="pDB-hN-iyk" firstAttribute="leading" secondItem="2wK-AH-O3f" secondAttribute="leading" id="ipP-vY-yDw"/>
+                            <constraint firstAttribute="trailing" secondItem="pDB-hN-iyk" secondAttribute="trailing" id="wbc-cg-asi"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="tableView" destination="pDB-hN-iyk" id="PX6-0D-uZC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HeI-dG-dsM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="347" y="457"/>
+        </scene>
+    </scenes>
+</document>
