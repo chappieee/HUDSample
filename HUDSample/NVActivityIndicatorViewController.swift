@@ -1,20 +1,23 @@
-//
-//  NVActivityIndicatorViewController.swift
-//  HUDSample
-//
-//  Created by 小林 佑介 on 2016/09/02.
-//  Copyright © 2016年 xyk. All rights reserved.
-//
-
 import UIKit
 import NVActivityIndicatorView
+import Cartography
 
 class NVActivityIndicatorViewController: UIViewController, NVActivityIndicatorViewable {
+    
+    var scrollView: UIScrollView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor(red: CGFloat(237 / 255.0), green: CGFloat(85 / 255.0), blue: CGFloat(101 / 255.0), alpha: 1)
+        let scrollView = UIScrollView()
+        self.view.addSubview(scrollView)
+        constrain(scrollView) {
+            $0.edges == $0.superview!.edges
+        }
+        
+        let baseView = UIView(frame: self.view.bounds)
+        baseView.backgroundColor = UIColor(red: CGFloat(237 / 255.0), green: CGFloat(85 / 255.0), blue: CGFloat(101 / 255.0), alpha: 1)
+        scrollView.addSubview(baseView)
         
         let cols = 4
         let rows = 8
@@ -39,8 +42,8 @@ class NVActivityIndicatorViewController: UIViewController, NVActivityIndicatorVi
             if ($0 == NVActivityIndicatorType.Orbit.rawValue) {
                 activityIndicatorView.padding = 0
             }
-            self.view.addSubview(activityIndicatorView)
-            self.view.addSubview(animationTypeLabel)
+            baseView.addSubview(activityIndicatorView)
+            baseView.addSubview(animationTypeLabel)
             activityIndicatorView.startAnimation()
             
             let button:UIButton = UIButton(frame: frame)
@@ -48,8 +51,11 @@ class NVActivityIndicatorViewController: UIViewController, NVActivityIndicatorVi
             button.addTarget(self,
                 action: #selector(buttonTapped(_:)),
                 forControlEvents: UIControlEvents.TouchUpInside)
-            self.view.addSubview(button)
+            baseView.addSubview(button)
         }
+        
+        scrollView.contentSize = self.view.bounds.size
+        self.scrollView = scrollView
     }
     
     func buttonTapped(sender: UIButton) {

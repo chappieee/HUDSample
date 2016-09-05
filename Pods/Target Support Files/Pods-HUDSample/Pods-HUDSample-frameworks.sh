@@ -84,6 +84,7 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/Cartography/Cartography.framework"
   install_framework "$BUILT_PRODUCTS_DIR/EZLoadingActivity/EZLoadingActivity.framework"
   install_framework "$BUILT_PRODUCTS_DIR/GCDKit/GCDKit.framework"
   install_framework "$BUILT_PRODUCTS_DIR/JGProgressHUD/JGProgressHUD.framework"
@@ -95,6 +96,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/SideMenuController/SideMenuController.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/Cartography/Cartography.framework"
   install_framework "$BUILT_PRODUCTS_DIR/EZLoadingActivity/EZLoadingActivity.framework"
   install_framework "$BUILT_PRODUCTS_DIR/GCDKit/GCDKit.framework"
   install_framework "$BUILT_PRODUCTS_DIR/JGProgressHUD/JGProgressHUD.framework"

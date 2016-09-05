@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Cartography.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>EZLoadingActivity.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -57,22 +62,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1498F46DCCD7C57B9A1BE833C63934AE</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>31C6A314F279E160FFF6E62A5FAFC3C6</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>3A26572527883850B5CCE9D867FCE9E0</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>617B0FC57CCB604D47A24E6198763D04</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>67C7EE185FAE6096029760CE5A5EAC65</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -87,7 +82,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BC81165B4FBA23F24396CA47FA55DFF7</key>
+		<key>C3A04698AAE4D6124C20602D622956E5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -102,7 +97,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>DED7EB91A5370F5BFC338FD1ED82748B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E0FC914B438E358D42E8AD849A2AAA89</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>F6F0516F82D07656D12F1C0716898F73</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F8C216DEE4FE15814F3892540E171CB2</key>
 		<dict>
 			<key>primary</key>
 			<true/>

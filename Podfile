@@ -12,5 +12,5 @@ target 'HUDSample' do
   pod 'NVActivityIndicatorView'
   pod 'SideMenuController'
   pod 'GCDKit'
-
+  pod 'Cartography'
 end
